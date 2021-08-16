@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+    catalog:
+        container_name: catalog
+        build: ./loopi_api_catalog
+        environment:
+            CHOKIDAR_USEPOLLING: "true"
+        volumes:
+            - ./workspace/loopi_api_catalog:/var/www/loopi_api_catalog
+            - ./workspace/dev-gcloud.json:/var/www/dev-gcloud.json
+        ports:
+            - "8080:8080"
+    discount:
+        container_name: discount
+        build: ./loopi_api_discount
+        environment:
+            CHOKIDAR_USEPOLLING: "true"
+        volumes:
+            - ./workspace/loopi_api_discount:/var/www/loopi_api_discount
+            - ./workspace/dev-gcloud.json:/var/www/dev-gcloud.json
+        ports:
+            - "8081:8080"
+    seller_central:
+        container_name: seller_central
+        build: ./loopi_seller_central_front
+        environment:
+            CHOKIDAR_USEPOLLING: "true"
+        volumes:
+            - ./workspace/loopi_seller_central_front:/var/www/loopi_seller_central_front
+            - ./workspace/dev-gcloud.json:/var/www/dev-gcloud.json
+        ports:
+            - "3000:3000"
+            - "35729:35729"

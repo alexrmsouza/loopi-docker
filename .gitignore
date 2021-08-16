@@ -1,0 +1,8 @@
+/workspace
+/template
+.vscode
+.idea
+.travis.yml
+README.md
+LICENSE.md
+
