@@ -1,6 +1,6 @@
 FROM node:latest
 
-LABEL maintainer="Alex Souze <alexmscontato@gmail.com>"
+LABEL maintainer="Alex Souza <alexmscontato@gmail.com>"
 
 # Installing basic ubuntu packages
 # RUN apt update

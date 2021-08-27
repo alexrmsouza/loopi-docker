@@ -1,6 +1,6 @@
 FROM node:latest
 
-LABEL maintainer="Alex Souze <alexmscontato@gmail.com>"
+LABEL maintainer="Alex Souza <alexmscontato@gmail.com>"
 
 # Installing Google Cloud SDK
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
